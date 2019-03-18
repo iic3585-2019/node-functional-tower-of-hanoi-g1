@@ -17,6 +17,7 @@ module.exports = {
             "unix"
         ],
         "no-console": "off",
+        "object-curly-spacing": ["error", "always"],
         "quotes": [
             "error",
             "double"
