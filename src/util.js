@@ -1,13 +1,13 @@
 
 export const createReverseRange = (length) => Array(length).fill().map((x, i) => length - i) ;
 
-export const addArrayStyle = (array) => "[" + array + "]\n" ; 
+export const styledArrayString = (array) => "[" + array + "]\n" ; 
 
 export const displayProgress = (stackA, stackB, stackC) => {
     let output = "=========\n";
-    output += addArrayStyle(stackA);
-    output += addArrayStyle(stackB);
-    output += addArrayStyle(stackC);
+    output += styledArrayString(stackA);
+    output += styledArrayString(stackB);
+    output += styledArrayString(stackC);
     console.log(output);
 }
 
