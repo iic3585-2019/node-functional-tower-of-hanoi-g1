@@ -1,5 +1,13 @@
 import {recursiveHanoi} from './recursive';
+const readline = require('readline');
 
-const nDisks = 3;
 
-recursiveHanoi(nDisks);
+const rl = readline.Interface(process.stdin, process.stdout);
+
+rl.question('Enter the number of disks: ', nDisks => {
+    recursiveHanoi(parseInt(nDisks));
+    rl.close();
+});
+
+
+
