@@ -1,0 +1,17 @@
+{
+  "name": "tower-of-hanoi",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "git@github.com:iic3585-2019/node-functional-tower-of-hanoi-g3.git",
+  "author": "Grupo 3",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node -r @babel/register src/index.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0"
+  }
+}
