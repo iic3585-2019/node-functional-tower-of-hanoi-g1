@@ -1,5 +1,5 @@
 import {recursiveHanoi} from './recursive';
-const readline = require('readline');
+import readline from 'readline';
 
 
 const rl = readline.Interface(process.stdin, process.stdout);
