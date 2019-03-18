@@ -9,8 +9,8 @@ export const displayProgress = (stackA, stackB, stackC) => {
     output += styledArrayString(stackB);
     output += styledArrayString(stackC);
     console.log(output);
-}
+};
 
 export const moveDisk = (target, source) => {
     target.push(source.pop());
-}
+};
