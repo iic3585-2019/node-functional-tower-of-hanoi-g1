@@ -1,11 +1,5 @@
-import {superFunc} from './util';
+import {recursiveHanoi} from './recursive';
 
-const main = () => {
-    console.log("Hola");
-    const s = {name: "hola"}
-    const {name} = s;
-    console.log(name);
-    superFunc();
-};
+const nDisks = 3;
 
-main();
+recursiveHanoi(nDisks);
