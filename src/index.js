@@ -1,11 +1,13 @@
-import { superFunc } from "./util";
+import { recursiveHanoi } from "./recursive";
+import readline from "readline";
 
-const main = () => {
-    console.log("Hola");
-    const s = { name: "hola" };
-    const { name } = s;
-    console.log(name);
-    superFunc();
-};
 
-main();
+const rl = readline.Interface(process.stdin, process.stdout);
+
+rl.question("Enter the number of disks: ", nDisks => {
+    recursiveHanoi(parseInt(nDisks));
+    rl.close();
+});
+
+
+
