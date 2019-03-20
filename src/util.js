@@ -14,3 +14,5 @@ export const displayProgress = (stackA, stackB, stackC) => {
 export const moveDisk = (target, source) => {
     target.push(source.pop());
 };
+
+export const getTotalMoves = (nDisks) => Math.pow(2, nDisks) - 1 ;
