@@ -5,9 +5,9 @@ export const styledArrayString = (array) => "[" + array + "]\n" ;
 
 export const displayProgress = (stackA, stackB, stackC) => {
     let output = "=========\n";
-    output += styledArrayString(stackA);
-    output += styledArrayString(stackB);
-    output += styledArrayString(stackC);
+    output += [stackA, stackB, stackC]
+        .map((val) => styledArrayString(val))
+        .reduce((prev, cur) => prev += cur);
     console.log(output);
 };
 

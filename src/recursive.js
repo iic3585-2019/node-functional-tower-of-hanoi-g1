@@ -6,7 +6,8 @@ import { displayProgress, moveDisk, createReverseRange } from "./util";
 export const recursiveHanoi = (nDisks) => {
     const stackA = createReverseRange(nDisks);
     const stackB = [];
-    const stackC = [];const move = (n, source, target, aux) => {
+    const stackC = [];
+    const move = (n, source, target, aux) => {
         if (n > 0) {
             move(n - 1, source, aux, target);
     
@@ -46,3 +47,17 @@ export const yCombHanoi = (nDisks) => {
     Ymove([nDisks, stackA, stackC, stackB, stackA, stackB, stackC]);
 }
 
+export const hanoi2 = (nDisks) => {
+    const stackA = createReverseRange(nDisks);
+    const stackB = [];
+    const stackC = [];
+    const move = n => (source, target, aux) => {
+        if (n == 0) return;
+        const little = move(n-1);
+        little(source, aux, target);
+        moveDisk(target, source);
+        displayProgress(stackA, stackB, stackC);
+        little(aux, target, source);
+    };
+    move(nDisks)(stackA, stackC, stackB);
+};
