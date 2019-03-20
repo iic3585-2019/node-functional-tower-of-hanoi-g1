@@ -33,6 +33,6 @@ export const hanoi2 = (nDisks) => {
         moveDisk(target, source);
         displayProgress(stackA, stackB, stackC);
         little(aux, target, source);
-    }
+    };
     move(nDisks)(stackA, stackC, stackB);
-}
+};
