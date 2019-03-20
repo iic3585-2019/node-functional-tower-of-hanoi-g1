@@ -24,7 +24,6 @@ rl.question("Enter the number of disks: ", nDisks => {
             iterativeHanoiSolver(disks);
             break;
         }
-
     });
 });
 

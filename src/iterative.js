@@ -24,7 +24,7 @@ const iterativeHanoi = (nTotalMoves, source, aux, target, display) => {
         }
         display();
     } 
-}
+};
 
 
 export const iterativeHanoiSolver = (nDisks) => {
@@ -33,8 +33,8 @@ export const iterativeHanoiSolver = (nDisks) => {
     const target = [];
 
     const display = () => nDisks % 2  ? 
-                        displayProgress(source, aux, target) :
-                        displayProgress(source, target, aux) 
+        displayProgress(source, aux, target) :
+        displayProgress(source, target, aux); 
     
     const nTotalMoves = getTotalMoves(nDisks);
     iterativeHanoi(nTotalMoves, source, aux, target, display);        
