@@ -2,7 +2,6 @@ import { displayProgress, moveDisk, createReverseRange } from "./util";
 
 // original code from https://en.wikipedia.org/wiki/Tower_of_Hanoi#Recursive_solution 
 
-
 export const recursiveHanoi = (nDisks) => {
     const stackA = createReverseRange(nDisks);
     const stackB = [];

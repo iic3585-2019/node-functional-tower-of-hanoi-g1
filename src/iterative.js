@@ -2,7 +2,7 @@ import { displayProgress,  createReverseRange, getTotalMoves, createRange,  lega
 
 // original code from https://www.geeksforgeeks.org/iterative-tower-of-hanoi/
 
-export const iterativeHanoiSolver = (nDisks) => {
+export const iterativeHanoi = (nDisks) => {
     const source = createReverseRange(nDisks);
     const aux = [];
     const target = [];
