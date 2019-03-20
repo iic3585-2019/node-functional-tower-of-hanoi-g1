@@ -1,4 +1,4 @@
-import { recursiveHanoi } from "./recursive";
+import { hanoi2 as recursiveHanoi } from "./recursive";
 import readline from "readline";
 
 
