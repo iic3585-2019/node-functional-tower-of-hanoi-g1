@@ -1,32 +1,6 @@
-import { displayProgress, moveDisk, createReverseRange, getTotalMoves } from "./util";
+import { displayProgress,  createReverseRange, getTotalMoves, createRange,  legalMove } from "./util";
 
 // original code from https://www.geeksforgeeks.org/iterative-tower-of-hanoi/
-
-const legalMove = (stackA, stackB) => {
-    if (!stackB.length) {
-        moveDisk(stackB, stackA);
-    } else if (!stackA.length) {
-        moveDisk(stackA, stackB);
-    } else if (stackA[stackA.length-1] > stackB[stackB.length-1]) {
-        moveDisk(stackA, stackB);
-    } else if (stackA[stackA.length-1] < stackB[stackB.length-1]) {
-        moveDisk(stackB, stackA);
-    }
-};
-
-const iterativeHanoi = (nTotalMoves, source, aux, target, display) => {
-    for (let i = 1; i <= nTotalMoves; i++){ 
-        if (i % 3 == 1){
-            legalMove(source, target); 
-        } else if (i % 3 == 2) {
-            legalMove(source, aux); 
-        } else if (i % 3 == 0) {
-            legalMove(aux, target); 
-        }
-        display();
-    } 
-};
-
 
 export const iterativeHanoiSolver = (nDisks) => {
     const source = createReverseRange(nDisks);
@@ -38,5 +12,16 @@ export const iterativeHanoiSolver = (nDisks) => {
         displayProgress(source, target, aux); 
     
     const nTotalMoves = getTotalMoves(nDisks);
-    iterativeHanoi(nTotalMoves, source, aux, target, display);        
+
+    createRange(nTotalMoves).forEach( i => { 
+      if (i % 3 == 1){
+          legalMove(source, target); 
+      } else if (i % 3 == 2) {
+          legalMove(source, aux); 
+      } else if (i % 3 == 0) {
+          legalMove(aux, target); 
+      }
+      display();
+  }) 
+     
 };

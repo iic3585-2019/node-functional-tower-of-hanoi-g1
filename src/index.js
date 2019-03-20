@@ -2,7 +2,7 @@ import readline from "readline";
 import {  recursiveHanoi } from "./recursive";
 import {  partEvalHanoi } from "./partEvalRecursive";
 import {  yCombHanoi } from "./recursiveY";
-import {  iterativeHanoiSolver } from "./iterative";
+import {  iterativeHanoi } from "./iterative";
 
 
 const rl = readline.Interface(process.stdin, process.stdout);
@@ -21,7 +21,7 @@ rl.question("Enter the number of disks: ", nDisks => {
             yCombHanoi(disks);
             break;
         case "4":
-            iterativeHanoiSolver(disks);
+            iterativeHanoi(disks);
             break;
         }
     });
