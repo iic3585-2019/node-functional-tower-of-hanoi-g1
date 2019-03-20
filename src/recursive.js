@@ -47,7 +47,7 @@ export const yCombHanoi = (nDisks) => {
     Ymove([nDisks, stackA, stackC, stackB, stackA, stackB, stackC]);
 }
 
-export const hanoi2 = (nDisks) => {
+export const partEvalHanoi = (nDisks) => {
     const stackA = createReverseRange(nDisks);
     const stackB = [];
     const stackC = [];
