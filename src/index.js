@@ -1,11 +1,11 @@
-import { recursiveHanoi } from "./recursive";
+import { recursiveHanoi as recursiveHanoi } from "./recursive";
 import readline from "readline";
 
 
 const rl = readline.Interface(process.stdin, process.stdout);
 
 rl.question("Enter the number of disks: ", nDisks => {
-    recursiveHanoi(parseInt(nDisks), 1);
+    recursiveHanoi(parseInt(nDisks));
     rl.close();
 });
 
