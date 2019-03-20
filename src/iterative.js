@@ -1,5 +1,6 @@
 import { displayProgress, moveDisk, createReverseRange, getTotalMoves } from "./util";
 
+// original code from https://www.geeksforgeeks.org/iterative-tower-of-hanoi/
 
 const legalMove = (stackA, stackB) => {
     if (!stackB.length) {
